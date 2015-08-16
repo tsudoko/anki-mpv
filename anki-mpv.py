@@ -39,10 +39,12 @@ def mpv_clear_queue():
 
 
 def mpv_kill(*args):
+    global m
     if m is None:
         return
 
     m.command("quit")
+    m = None
 
 hooks.remHook("unloadProfile", sound.stopMplayer)
 hooks.addHook("unloadProfile", mpv_kill)
