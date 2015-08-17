@@ -9,13 +9,14 @@ import mpv
 # we need to have global state due to how sound.play() and
 # sound.clearAudioQueue() are used in other modules
 
-setlocale(LC_NUMERIC, "C")
 
 m = None
 
 
 def mpv_init():
     global m
+
+    setlocale(LC_NUMERIC, "C")
     if m is not None:
         return
 
@@ -40,6 +41,7 @@ def mpv_clear_queue():
 
 def mpv_kill(*args):
     global m
+
     if m is None:
         return
 
