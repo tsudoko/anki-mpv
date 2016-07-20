@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# License: CC0 1.0 Universal
+# See the LICENSE file for license details.
 
 from locale import setlocale, LC_NUMERIC
 from anki.utils import isWin
