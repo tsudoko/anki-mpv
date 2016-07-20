@@ -2,7 +2,7 @@ anki-mpv
 ========
 
 **anki-mpv** is an [Anki][0] add-on that lets you use [mpv][1] instead of
-mplayer for playing sound files.
+mplayer for playing media files.
 
 Not tested on platforms other than Linux, there might be some issues. Any
 contributions welcome.
