@@ -2,7 +2,6 @@
 # See the LICENSE file for license details.
 
 from locale import setlocale, LC_NUMERIC
-from anki.utils import isWin
 from anki import sound, hooks
 import mpv
 
@@ -25,9 +24,6 @@ def mpv_init():
 
 
 def mpv_add_to_queue(path):
-    if not isWin:
-        path = path.encode("utf-8")
-
     mpv_init()
     m.command("loadfile", path, "append-play")
 
