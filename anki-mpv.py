@@ -16,15 +16,15 @@ def mpv_init():
     global m
 
     setlocale(LC_NUMERIC, "C")
-    if m is not None:
-        return
 
     m = mpv.Context()
     m.initialize()
 
 
 def mpv_add_to_queue(path):
-    mpv_init()
+    if m is None:
+        mpv_init()
+
     m.command("loadfile", path, "append-play")
 
 
